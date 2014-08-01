@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Read HN</title>
+</head>
+<body>
+  <script>
+    //https://developer.chrome.com/extensions/xhr
+    function getGreeting() {
+      var hour = new Date().getHours();
+
+      if (hour > 17) { return "Good Evening."; }
+      if (hour > 12) { return "Good Afternoon."; }
+      if (hour > 5) { return "Good Morning."; }
+
+      return "Why are you up so late? You should probably sleep...Anyways...";
+    }
+
+    function sayAnything(thing) {
+      var msg = new SpeechSynthesisUtterance(thing);
+      window.speechSynthesis.speak(msg);
+    }
+
+    function handleHN(res) {
+      var msg = "";
+      var greetingOpening = getGreeting();
+      var greetingClosing = "That's all for now. Goodbye."
+
+      sayAnything(greetingOpening);
+
+      res.items.forEach(function(item) {
+        sayAnything(item.title + '.');
+      });
+
+      sayAnything(greetingClosing);
+    }
+
+  </script>
+  <script src="http://api.ihackernews.com/page?format=jsonp&callback=handleHN"></script>
+
+  <img src="http://now-here-this.timeout.com/wp-content/uploads/2013/02/tumblr_lhjnfsdULm1qzp85mo1_500.gif" alt="reading...">
+</body>
+</html>
