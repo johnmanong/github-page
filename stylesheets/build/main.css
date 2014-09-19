@@ -17,16 +17,16 @@ html {
   font-weight: 300;
   background-color: black;
   position: absolute;
-  height: 300px;
-  width: 300px;
+  height: 270px;
+  width: 270px;
   top: 50%;
   left: 50%;
-  margin-top: -150px;
-  margin-left: -150px;
+  margin-top: -135px;
+  margin-left: -135px;
   color: white;
   line-height: 1.7;
   letter-spacing: 1px;
-  padding: 132px 0;
+  padding: 117px 0;
   box-shadow: 0 0 0 1px white, 0 0 0 0.9em black; }
   .contact-info a {
     color: white;
