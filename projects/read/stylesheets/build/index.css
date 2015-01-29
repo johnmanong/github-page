@@ -1,0 +1,61 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  font-size: 24px; }
+
+.reading-container {
+  max-width: 940px;
+  margin: 0 auto; }
+  .reading-container .reading {
+    box-shadow: 0 6px 8px -8px rgba(0, 0, 0, 0.7);
+    border: 1px solid #bdc3c7;
+    line-height: 1.5;
+    padding: 1.5em; }
+  .reading-container .reading__word--current {
+    border-bottom: 1px solid #34495e; }
+  .reading-container .reading__word--correct {
+    color: #1abc9c; }
+  .reading-container .reading__word--incorrect {
+    color: #e74c3c; }
+  .reading-container .reading__word--skipped {
+    color: #bdc3c7; }
+  .reading-container .reading__curent-status__speech--interim {
+    color: #bdc3c7; }
+  .reading-container .reading__curent-status__speech--final {
+    color: black; }
+  .reading-container .reading__curent-status {
+    line-height: 1.5;
+    margin: 1.5em 0 1em;
+    padding: .5em; }
+  .reading-container .reading__curent-status__speech__prompt {
+    color: #95a5a6;
+    float: left; }
+  .reading-container .reading__curent-status__speech__input {
+    border-bottom: 1px solid #bdc3c7;
+    margin-left: 110px;
+    padding: 0 .3em; }
+  .reading-container .reading-control__button--skip-word,
+  .reading-container .reading-control__button--done {
+    float: right; }
+
+.reading-control__button {
+  box-shadow: 0 6px 8px -8px rgba(0, 0, 0, 0.7);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #2c3e50;
+  color: #34495e;
+  cursor: pointer;
+  display: inline-block;
+  margin: .2em;
+  padding: .3em;
+  transition: background-color 200ms, color 200ms; }
+  .reading-control__button:hover {
+    background-color: #f4f5f6;
+    color: black; }
+  .reading-control__button:active {
+    background-color: #f1f3f3; }
